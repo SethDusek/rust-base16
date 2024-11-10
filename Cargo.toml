@@ -1,7 +1,7 @@
 [package]
 name = "base16"
 version = "0.2.1"
-rust-version = "1.60.0"
+rust-version = "1.81.0"
 authors = ["Thom Chiovoloni <chiovolonit@gmail.com>"]
 keywords = ["hex", "base16", "encode", "decode", "no_std"]
 repository = "https://github.com/thomcc/rust-base16"
@@ -18,7 +18,6 @@ members = ["benchmarks", "fuzz"]
 bench = false
 
 [features]
-std = ["alloc"]
 alloc = []
 default = ["alloc"]
 

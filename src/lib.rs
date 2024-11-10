@@ -43,7 +43,7 @@
 //!
 //! [alloc_crate]: https://doc.rust-lang.org/alloc/index.html
 
-#![cfg_attr(not(feature = "std"), no_std)]
+#![no_std]
 #![deny(missing_docs)]
 
 #[cfg(feature = "alloc")]
@@ -435,8 +435,7 @@ impl core::fmt::Display for DecodeError {
     }
 }
 
-#[cfg(feature = "std")]
-impl std::error::Error for DecodeError {}
+impl core::error::Error for DecodeError {}
 
 #[inline]
 fn decode_slice_raw(src: &[u8], dst: &mut [MaybeUninit<u8>]) -> Result<(), usize> {
